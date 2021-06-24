@@ -19,9 +19,9 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	ground= new Ground (600,380,1200,20)
+	ground= new Ground (600,395,1200,20)
 	papper = new Papper(40,40,20)
-	greenbin = new Dustbin(978,300,160,180)
+	greenbin = new Dustbin(1000,390);
 	
 
 
@@ -34,7 +34,7 @@ function setup() {
 function draw() {
   rectMode(CENTER);
 
-  background("white");
+  background("lightBlue");
 
 
   ground.display();
@@ -47,7 +47,7 @@ function draw() {
 }
 function keyPressed(){
 	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(papper.body, papper.body.position,{x:38,y:-38})
+		Matter.Body.applyForce(papper.body, papper.body.position,{x:36,y:-36})
 	}
 }
 
